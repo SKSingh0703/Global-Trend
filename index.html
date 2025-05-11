@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Page - Shopify Clone</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="product-page">
+
+        <div class="product-gallery">
+            <div class="main-image">
+                <img id="mainImage" src="https://cdn.pixabay.com/photo/2021/10/11/18/56/shoes-6701631_1280.jpg" alt="Product Image">
+            </div>
+            <div class="thumbnails">
+                <img src="https://cdn.pixabay.com/photo/2016/11/19/18/06/feet-1840619_1280.jpg" alt="Thumbnail" class="thumbnail" onclick="changeImage(this)">
+                <img src="https://cdn.pixabay.com/photo/2016/03/27/22/16/fashion-1284496_1280.jpg" alt="Thumbnail" class="thumbnail" onclick="changeImage(this)">
+                <img src="https://cdn.pixabay.com/photo/2016/11/19/18/06/feet-1840619_1280.jpg" alt="Thumbnail" class="thumbnail" onclick="changeImage(this)">
+                <img src="https://cdn.pixabay.com/photo/2015/10/06/15/58/baby-shoes-974715_1280.jpg" alt="Thumbnail" class="thumbnail" onclick="changeImage(this)">
+            </div>
+        </div>
+
+        
+        <div class="product-info">
+            <h1>TVS Racing Casual Shoes - Denim</h1>
+            <p class="price">₹2,560</p>
+
+           
+            <div class="variants">
+                <label for="color">Color: </label>
+                <div id="colorVariants">
+                    <button class="variant-btn" onclick="changeVariant('Red')">Red</button>
+                    <button class="variant-btn" onclick="changeVariant('Blue')">Blue</button>
+                    <button class="variant-btn" onclick="changeVariant('Green')">Green</button>
+                </div>
+
+                <label for="size">Size: </label>
+                <select id="sizeSelect">
+                    <option value="S">Small</option>
+                    <option value="M">Medium</option>
+                    <option value="L">Large</option>
+                </select>
+            </div>
+
+            
+            <button id="sizeChartBtn">Size Chart</button>
+            <div id="sizeChartModal" class="modal">
+                <div class="modal-content">
+                    <span class="close-btn" onclick="closeModal()">×</span>
+                    <h3>Size Chart</h3>
+                    <table>
+                        <tr><th>Size</th><th>Chest</th><th>Length</th></tr>
+                        <tr><td>S</td><td>34" </td><td>28"</td></tr>
+                        <tr><td>M</td><td>38"</td><td>30"</td></tr>
+                        <tr><td>L</td><td>42"</td><td>32"</td></tr>
+                    </table>
+                </div>
+            </div>
+
+            
+            <button id="compareBtn">Compare Colours</button>
+            <div id="compareModal" class="modal">
+                <div class="modal-content">
+                    <span class="close-btn" onclick="closeModal()">×</span>
+                    <h3>Compare Colours</h3>
+                    <div class="color-comparison">
+                        <button class="color-swatch" style="background-color: red;">Red</button>
+                        <button class="color-swatch" style="background-color: blue;">Blue</button>
+                        <button class="color-swatch" style="background-color: green;">Green</button>
+                    </div>
+                </div>
+            </div>
+
+            
+<h3>Pair Well With</h3>
+<div class="pair-well-with scrollable-row">
+    <div class="product-card">
+        <img src="https://cdn.pixabay.com/photo/2015/01/03/03/51/sandals-587185_1280.jpg" alt="Product">
+        <p>Product 1</p>
+        <p>₹2,560</p>
+        <button>Add to Cart</button>
+    </div>
+    <div class="product-card">
+        <img src="https://cdn.pixabay.com/photo/2018/12/17/23/39/baby-shoes-3881526_1280.jpg" alt="Product">
+        <p>Product 2</p>
+        <p>₹4,270</p>
+        <button>Add to Cart</button>
+    </div>
+    
+    <div class="product-card">
+        <img src="https://cdn.pixabay.com/photo/2016/11/29/09/08/shoes-1869992_1280.jpg" alt="Product">
+        <p>Product 3</p>
+        <p>₹3,200</p>
+        <button>Add to Cart</button>
+    </div>
+</div>
+
+
+<div class="bundle-suggestion">
+    <h4>Buy These Together</h4>
+    <div class="scrollable-row">
+        <div class="product-card">
+            <img src="https://cdn.pixabay.com/photo/2017/08/20/10/28/leather-shoes-2661198_1280.jpg" alt="Product">
+            <p>Bundle Product 1</p>
+            <p>₹3,415</p>
+        </div>
+        <div class="product-card">
+            <img src="https://cdn.pixabay.com/photo/2022/07/27/12/13/shoes-7347802_1280.jpg" alt="Product">
+            <p>Bundle Product 2</p>
+            <p>₹5,120</p>
+        </div>
+        
+        <div class="product-card">
+            <img src="https://cdn.pixabay.com/photo/2016/03/27/22/16/fashion-1284496_1280.jpg" alt="Product">
+            <p>Bundle Product 3</p>
+            <p>₹4,500</p>
+        </div>
+    </div>
+    <button>Add Bundle to Cart</button>
+</div>
+
+
+<h3>Related Products</h3>
+<div class="related-products">
+    <div class="product-card">
+        <img src="https://cdn.pixabay.com/photo/2019/09/28/12/31/sports-shoes-4510638_1280.jpg" alt="Related Product">
+        <p>Related Product 1</p>
+        <p>₹3,415</p>
+    </div>
+    <div class="product-card">
+        <img src="https://cdn.pixabay.com/photo/2015/10/06/15/57/baby-shoes-974714_1280.jpg" alt="Related Product">
+        <p>Related Product 2</p>
+        <p>₹5,120</p>
+    </div>
+    <div class="product-card">
+        <img src="https://cdn.pixabay.com/photo/2018/11/30/00/31/baby-shoes-3846824_1280.jpg" alt="Related Product">
+        <p>Related Product 3</p>
+        <p>₹2,560</p>
+    </div>
+    <div class="product-card">
+        <img src="https://cdn.pixabay.com/photo/2020/05/27/07/41/nike-5226091_1280.jpg" alt="Related Product">
+        <p>Related Product 4</p>
+        <p>₹4,270</p>
+    </div>
+</div>
+
+    </div>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
